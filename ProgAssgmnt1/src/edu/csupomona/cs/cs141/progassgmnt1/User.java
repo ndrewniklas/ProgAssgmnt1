@@ -9,4 +9,5 @@ package edu.csupomona.cs.cs141.progassgmnt1;
  */
 public class User {
 
+	private String name;
 }
