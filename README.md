@@ -11,3 +11,5 @@ You should also submit appropriate documentation supporting your design: what di
 Follow the submission guidelines and send me an email with the compressed file. You will also submit a print-out of the source code and relevant documentation in class, during the class meeting immediately after the due date.
 
 This assignment is worth 25 points.
+
+Due: Wednesday April 16th, 2014 at start of class.
