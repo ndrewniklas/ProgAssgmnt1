@@ -25,7 +25,8 @@ package edu.csupomona.cs.cs141.progassgmnt1;
 public class Enemy {
 	
 	/**
-	 * 
+	 * The directory for the character model
+	 * Called within the drawModel() method
 	 */
 	private String drawModelDir;
 	
@@ -103,11 +104,6 @@ public class Enemy {
 	/**
 	 * 
 	 */
-	private String[] weaponList;
-	
-	/**
-	 * 
-	 */
 	private boolean isWeaponOutOfAmmo;
 
 	/**
@@ -117,24 +113,28 @@ public class Enemy {
 		
 	}
 	
+	public int getMovementSpeed(){
+		return movementSpeed;
+	}
+	
 	/**
-	 * @param movementSpeed
+	 * 
 	 */
-	public void moveForward(int movementSpeed){
+	public void moveForward(){
 		
 	}
 
 	/**
-	 * @param movementSpeed
+	 * 
 	 */
-	public void moveBackwards(int movementSpeed){
+	public void moveBackwards(){
 		
 	}
 	
 	/**
-	 * @param movementSpeed
+	 * 
 	 */
-	public void moveLeft(int movementSpeed){
+	public void moveLeft(){
 	
 	}
 	
@@ -147,9 +147,9 @@ public class Enemy {
 	}
 	
 	/**
-	 * @param jumpHeight
+	 * 
 	 */
-	public void jump(int jumpHeight){
+	public void jump(){
 		
 	}
 	
@@ -175,11 +175,9 @@ public class Enemy {
 	}
 	
 	/**
-	 * @param hearDistance
-	 * @param sightDistance
-	 * @param abilityToFindEnemy
+	 *
 	 */
-	public void targetFinding(int hearDistance, int sightDistance, int abilityToFindEnemy){
+	public void targetFinding(){
 		
 	}
 	
@@ -198,7 +196,7 @@ public class Enemy {
 	}
 	
 	/**
-	 * @param health
+	 * @param hp
 	 * @return
 	 */
 	public int setHealth(int hp){
