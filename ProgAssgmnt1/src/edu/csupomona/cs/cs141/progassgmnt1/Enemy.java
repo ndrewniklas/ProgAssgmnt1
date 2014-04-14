@@ -21,14 +21,7 @@ package edu.csupomona.cs.cs141.progassgmnt1;
  * @author Andrew Nipp
  *
  */
-/**
- * @author Andrew
- *
- */
-/**
- * @author Andrew
- *
- */
+
 public class Enemy {
 	
 	/**
@@ -208,8 +201,8 @@ public class Enemy {
 	 * @param health
 	 * @return
 	 */
-	public int setHealth(int health){
-		return null;
+	public int setHealth(int hp){
+		return health;
 	}
 	
 	/**
@@ -217,7 +210,7 @@ public class Enemy {
 	 * @return
 	 */
 	public int getHealth(){
-		return null;
+		return health;
 	}
 	
 	/**
