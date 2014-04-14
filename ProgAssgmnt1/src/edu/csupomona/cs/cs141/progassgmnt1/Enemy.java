@@ -21,6 +21,224 @@ package edu.csupomona.cs.cs141.progassgmnt1;
  * @author Andrew Nipp
  *
  */
+/**
+ * @author Andrew
+ *
+ */
+/**
+ * @author Andrew
+ *
+ */
 public class Enemy {
+	
+	/**
+	 * 
+	 */
+	private String drawModelDir;
+	
+	/**
+	 * 
+	 */
+	private int movementSpeed;
+	
+	/**
+	 * 
+	 */
+	private int health;
+	
+	/**
+	 * 
+	 */
+	private boolean isPathBlocked;
+	
+	/**
+	 * 
+	 */
+	private boolean canJump;
+	
+	/**
+	 * 
+	 */
+	private int jumpHeight;
+	
+	
+	/**
+	 * 
+	 */
+	private boolean canCrouch;
+	
+	/**
+	 * 
+	 */
+	private int hearDistance;
+	
+	/**
+	 * 
+	 */
+	private int sightDistance;
+	
+	/**
+	 * 
+	 */
+	private boolean isEnemy;
+	
+	/**
+	 * 
+	 */
+	private boolean isFriend;
+	
+	/**
+	 * 
+	 */
+	private boolean chaseEnemy;
+	
+	/**
+	 * 
+	 */
+	private boolean stopChase;
+	
+	/**
+	 * 
+	 */
+	private int abilityToFindEnemy;
+	
+	/**
+	 * 
+	 */
+	private int abilityToDodgeAndHide;
+	
+	/**
+	 * 
+	 */
+	private String[] weaponList;
+	
+	/**
+	 * 
+	 */
+	private boolean isWeaponOutOfAmmo;
 
+	/**
+	 * 
+	 */
+	public void drawModel(){
+		
+	}
+	
+	/**
+	 * @param movementSpeed
+	 */
+	public void moveForward(int movementSpeed){
+		
+	}
+
+	/**
+	 * @param movementSpeed
+	 */
+	public void moveBackwards(int movementSpeed){
+		
+	}
+	
+	/**
+	 * @param movementSpeed
+	 */
+	public void moveLeft(int movementSpeed){
+	
+	}
+	
+
+	/**
+	 *
+	 */
+	public void crouch(){
+		
+	}
+	
+	/**
+	 * @param jumpHeight
+	 */
+	public void jump(int jumpHeight){
+		
+	}
+	
+	/**
+	 * 
+	 */
+	public void turnCounterClockwise(){
+		
+	}
+	
+	/**
+	 * 
+	 */
+	public void turnClockwise(){
+		
+	}
+
+	/**
+	 * 
+	 */
+	public void pathFinding(){
+		
+	}
+	
+	/**
+	 * @param hearDistance
+	 * @param sightDistance
+	 * @param abilityToFindEnemy
+	 */
+	public void targetFinding(int hearDistance, int sightDistance, int abilityToFindEnemy){
+		
+	}
+	
+	/**
+	 *
+	 */
+	public void noticeEntity(){
+		
+	}
+	
+	/**
+	 * 
+	 */
+	public void decideAction(){
+		
+	}
+	
+	/**
+	 * @param health
+	 * @return
+	 */
+	public int setHealth(int health){
+		return null;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int getHealth(){
+		return null;
+	}
+	
+	/**
+	 * @param weaponList
+	 */
+	public void equipWeapon(String[] weaponList){
+		
+	}
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
