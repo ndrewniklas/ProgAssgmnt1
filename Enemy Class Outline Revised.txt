@@ -1,0 +1,37 @@
+Class Enemy:
+
+		-drawModelDir
+		-drawModel()
+		-movementSpeed
+		- moveBack(), moveLeft(), moveRight(), moveForward()
+			//Check PathFinding if this can move
+			//If the path is free then move to the path chosen by TargetFinding
+		-crouch()
+			//Check PathFinding if this can crouch
+			//If this can crouch then crouch based on abilityToDodge
+		-jump()
+			//Check PathFinding if this can jump
+			//If this needs to jump to continue chasing then allow it to 
+		-turnCounterClockwise(), turnClockwise()
+			//Turn when this needs to continue to chase enemy
+		-pathFinding() //See if path is clear 
+		-isPathBlocked //Check to see if the path is blocked or free
+		-canJump //Check if there is anything above this when needing to jump
+		-canCrouch //Check to see if this can crouch
+		-targetFinding() //Find a target and decide either to chase or not 
+		- isEnemy,  isFriend //Check if  entity is friend or enemy 
+		-noticeEntity()
+		-hearDistance
+		-sightDistane
+		-decideAction()
+		-dodgeAndHide()
+		-chaseEnemy //Chase enemy
+		-stopChase //Stop the chase if the enemy is gone or it is too risky to continue
+		- health//How much damage this can take
+		-setHealth()
+		-getHealth()
+		-abilityToFindEnemy //How well this can hear and see the enemy
+		- abilityToDodgeAndHide //How well this can dodge attacks and hide
+		-weaponList[]
+		-equipWeapon() //Choose weapon, equip weapon
+		- isWeaponOutOfAmmo//Check to see if current weapon is out of ammo
