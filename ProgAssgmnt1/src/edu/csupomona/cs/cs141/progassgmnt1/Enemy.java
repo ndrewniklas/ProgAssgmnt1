@@ -26,142 +26,139 @@ public class Enemy {
 	
 	/**
 	 * The directory for the character model
-	 * Called within the drawModel() method
 	 */
 	private String drawModelDir;
 	
 	/**
-	 * 
+	 * The speed of the Enemy NPC's movement
 	 */
 	private int movementSpeed;
 	
 	/**
-	 * 
+	 * The amount of health points the Enemy NPC has
 	 */
 	private int health;
 	
 	/**
-	 * 
+	 * Checks to see if the path is blocked 
 	 */
 	private boolean isPathBlocked;
 	
 	/**
-	 * 
+	 * Checks to see if the Enemy NPC can jump
 	 */
 	private boolean canJump;
 	
 	/**
-	 * 
+	 * The height the Enemy NPC can jump
 	 */
 	private int jumpHeight;
-	
-	
+		
 	/**
-	 * 
+	 * Checks to see if the Enemy NPC can crouch
 	 */
 	private boolean canCrouch;
 	
 	/**
-	 * 
+	 * The distance the Enemy NPC can hear a noise
 	 */
 	private int hearDistance;
 	
 	/**
-	 * 
+	 * The distance the Enemy NPC can see an entity
 	 */
 	private int sightDistance;
 	
 	/**
-	 * 
+	 * Checks to see if the entity found is an enemy (player) or friend
 	 */
 	private boolean isEnemy;
 	
 	/**
-	 * 
+	 * Checks to see if the Enemy NPC should chase the player
 	 */
-	private boolean isFriend;
+	private boolean shouldChaseEnemy;
 	
 	/**
-	 * 
+	 * Checks to see if the Enemy NPC should stop chasing the player
 	 */
-	private boolean chaseEnemy;
+	private boolean shouldStopChase;
 	
 	/**
-	 * 
-	 */
-	private boolean stopChase;
-	
-	/**
-	 * 
+	 * The Enemy NPC's ability to find enemies through sight and sound
+	 * This integer will multiply the sightDistance and the hearDistance depending on the Gamemode
 	 */
 	private int abilityToFindEnemy;
-	
-	/**
-	 * 
-	 */
-	private int abilityToDodgeAndHide;
-	
-	/**
-	 * 
-	 */
-	private boolean isWeaponOutOfAmmo;
 
 	/**
-	 * 
+	 * This method assigns a model to the Enemy NPC 
+	 * The model is determined by the drawModelDir string which will be declared in this method
 	 */
 	public void drawModel(){
 		
 	}
 	
+	/**
+	 * This method returns the movement speed of the Enemy NPC
+	 * @return the movement speed
+	 */
 	public int getMovementSpeed(){
 		return movementSpeed;
 	}
 	
 	/**
-	 * 
+	 * This method uses the speed from movementSpeed to move the Enemy NPC forward
 	 */
 	public void moveForward(){
 		
 	}
 
 	/**
-	 * 
+	 * This method uses the speed from movementSpeed to move the Enemy NPC backwards
 	 */
 	public void moveBackwards(){
 		
 	}
 	
 	/**
-	 * 
+	 * This method uses the speed from movementSpeed to move the Enemy NPC in the left direction (strafe)
 	 */
 	public void moveLeft(){
 	
 	}
 	
-
 	/**
-	 *
+	 * This method uses the speed from movementSpeed to move the Enemy NPC in the right direction (strafe)
+	 */
+	public void moveRight(){
+	
+	}
+	
+	/**
+	 * This method checks the canCrouch boolean to see if the Enemy NPC can crouch
+	 * If the Enemy NPC can crouch then do so, if not then do nothing
 	 */
 	public void crouch(){
 		
 	}
 	
 	/**
-	 * 
+	 * This method checks the canJump boolean to see if the Enemy NPC can jump
+	 * If the Enemy NPC can jump then do so, if not then do nothing
 	 */
 	public void jump(){
 		
 	}
 	
 	/**
-	 * 
+	 * This method will cause the Enemy NPC to turn counterclockwise
 	 */
 	public void turnCounterClockwise(){
 		
 	}
 	
 	/**
-	 * 
+	 * This method will cause the Enemy NPC to turn clockwise
 	 */
 	public void turnClockwise(){
 		
@@ -195,6 +192,13 @@ public class Enemy {
 		
 	}
 	
+	/**
+	 * 
+	 */
+	public void chaseEnemy(){
+	
+	}
+
 	/**
 	 * @param hp
 	 * @return
