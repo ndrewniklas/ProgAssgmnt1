@@ -176,58 +176,67 @@ public class Enemy {
 	}
 
 	/**
-	 * 
+	 * This method checks current paths and other paths and decides which path is best
+	 * If the decideAction method decides that the Enemy NPC should find a path then this method should choose which path to take
+	 * Define isPathBlocked and check to see if the path is blocked; if the path is not blocked and it is the best way to the target,
+	 * which is decided in targetFinding, then take that path.
+	 * Check to see if the Enemy NPC can jump; if it can and it will help it reach the target then do so.
+	 * Check to see if the Enemy  NPC can crouch; if it can and it will help it dodge and hide, which is decided under decideAction,
+	 * then do so.
 	 */
 	public void pathFinding(){
 		
 	}
 	
 	/**
-	 *
+	 * This method uses hearDistance and sightDistance to find a target for decideAction() 
+	 * Get the abilityToFindEnemy value from the Gamemode and then multiply it by hearDistance and sightDistance 
+	 * If the method finds a target then decide if isEnemy is true or false
+	 * Give the target to decideAction()
 	 */
 	public void targetFinding(){
 		
 	}
 	
 	/**
-	 *
-	 */
-	public void noticeEntity(){
-		
-	}
-	
-	/**
-	 * 
+	 * This method retrieves a target from targetFinding() and depending on if it is an enemy or not decide a course of action
+	 * Decide if shouldChaseEnemy is true, if so then call chaseEnemy(), if not then do nothing
+	 * If the Enemy Npc is chasing the enemy the decide if it should stop or not based on how much health is left with shouldStopChase
+	 * If the Enemy NPC is chasing the enemy then have the pathFinding() method find a proper path 
+	 * If no gun is equipped then call equipWeapon()
 	 */
 	public void decideAction(){
 		
 	}
 	
 	/**
-	 * 
+	 * This method has the Enemy NPC chase the enemy chosen by targetFinding
+	 * If the decideAction() method wants to start the chase then start it, if it wants to stop the chase then stop it. 
 	 */
 	public void chaseEnemy(){
 	
 	}
 
 	/**
+	 * This method sets the current health of the Enemy NPC, based on Gamemode
 	 * @param hp
-	 * @return
+	 * @return the set health
 	 */
 	public int setHealth(int hp){
 		return health;
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * This method gives us this current health
+	 * @return the health
 	 */
 	public int getHealth(){
 		return health;
 	}
 	
 	/**
-	 * @param weaponList
+	 * This method has the Enemy NPC equip a weapon defined in the Weapon class
+	 * @param weaponList from the Weapon class
 	 */
 	public void equipWeapon(String[] weaponList){
 		
