@@ -21,8 +21,15 @@ package edu.csupomona.cs.cs141.progassgmnt1;
  */
 public class User {
 
+	private static boolean userDead;
+
 	/**
-	 * Holds the name of the user/character
+	 * This field is a constant string that gives {@link User} a name to check for kills
+	 */
+	public final static String USER = "User";
+
+	/**
+	 * Holds the name of the user/character 
 	 */
 	private String name;
 
@@ -98,6 +105,29 @@ public class User {
 	 */
 	public String switchWeapon(int weaponNum){
 		return "weaponID";
+	}
+	
+	/**
+	 * This method tracks the health of {@link User} for use in {@link Levels}
+	 * @param dmgFinal
+	 * 		amount of damage done to the User by the Enemy
+	 * @return
+	 * 		whether the {@link User} is dead
+	 */
+	public static boolean hpTracker(int dmgFinal) {
+		return userDead;
+	}
+	
+	/**
+	 * This method will determine who last did damage to the {@link User} and return the string giving credit
+	 * @param dmgFinal
+	 * 		used for determining who last damaged {@link User}
+	 * @return
+	 * 		only returns {@link Enemy#ENEMY}, but would be able to return {@link #USER} or other defined 
+	 * 		enemies in the final version
+	 */
+	public static String lastHitBy(int dmgFinal) {
+		return Enemy.ENEMY;
 	}
 	
 	/**

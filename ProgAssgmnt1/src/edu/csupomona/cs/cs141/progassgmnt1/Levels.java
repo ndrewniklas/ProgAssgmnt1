@@ -18,6 +18,17 @@ package edu.csupomona.cs.cs141.progassgmnt1;
  */
 
 /**
+ * This class allows {@link User} and {@link Enemy} to interact with eachother within some level of the \
+ * User's choosing.
+ * 
+ * @author Ben
+ *
+ */
+/**
+ * @author Ben
+ *
+ */
+/**
  * @author Ben
  *
  */
@@ -27,14 +38,6 @@ public class Levels {
 	 * This field is used to keep track of which level is being selected 
 	 */
 	private int levelSelect;
-	
-	
-	/**
-	 * This field is used to keep track of whether the level is Day or Night.
-	 * Day is automatic when boolean is false.
-	 * Night is automatic when boolean is true.
-	 */
-	private boolean dayNight;
 	
 	/**
 	 * This field is for use with {@link #bulletsFired(boolean)}
@@ -67,9 +70,21 @@ public class Levels {
 	/**
 	 * This field is for use with {@link #scoreCount()}. Can keep track of kills (DeathMatch), flag captures
 	 * (CTF), seconds in the hill (King of the Hill), or points scored from sector control (Domination)
-	 * 
 	 */
-	private static int point;	
+	private static int point;
+
+
+	/**
+	 * This field is for use with {@link #killTracker(boolean)}, it returns true if the 
+	 * {@link Enemy} killed the {@link User}
+	 */
+	private static boolean enemyKill;
+
+	/**
+	 * This field is for use with {@link #killTracker(boolean)}, it returns true if the
+	 * {@link User} killed the {@link Enemy} 
+	 */
+	private static boolean userKill;	
 	
 	/**
 	 * This method tracks the bullets fired from either the User or the Enemy
@@ -95,6 +110,40 @@ public class Levels {
 	 */
 	public static int dmgCalculator(int dmg, boolean isHit) {
 		return dmgFinal;
+	}
+	
+	/**
+	 * This method will determine if the {@link Enemy} killed the {@link User} and return a boolean
+	 * @param who
+	 * 		contains the info of whoever last hit the {@link User} to kill them.
+	 * @return
+	 * 		boolean {@link #enemyKill} true, if {@link Enemy} got the last hit. 
+	 */
+	public static boolean userKilled(String who) {
+		return enemyKill;
+	}
+	
+	/**
+	 * This method will determine if the {@link User} killed the {@link Enemy} and return a boolean
+	 * @param who
+	 * 		contains the info of whoever last hit the {@link Enemy} to kill them.
+	 * @return
+	 * 		boolean {@link #userKill} true, if {@link User} got the last hit. 
+	 */
+	public static boolean enemyKilled(String who) {
+		return userKill;
+	}
+	
+	
+	/**
+	 * This method will award a point to the appropriate party for getting a kill.
+	 * @param kill
+	 * 		either {@link #userKill} or {@link #enemyKill}.
+	 * @return
+	 * 		gives a {@link point} to the appropriate party
+	 */		
+	public static int killTracker(boolean kill) {
+		return point;
 	}
 	
 	/**
