@@ -47,6 +47,11 @@ public class User {
 	private boolean hasWeapon;
 
 	/**
+	 * is true when User shoots weapon
+	 */
+	private boolean isShooting;
+	
+	/**
 	 * Holds items that the character currently has such as weapons, ammo,
 	 * health packs
 	 */
@@ -69,8 +74,10 @@ public class User {
 	
 	/**
 	 * calls shoot method for current weapon
+	 * returns true when user fires weapon
 	 */
-	public void shoot(){
+	public boolean shoot(){
+		return isShooting;
 		
 	}
 	

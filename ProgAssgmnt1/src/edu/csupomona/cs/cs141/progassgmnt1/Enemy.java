@@ -90,10 +90,21 @@ public class Enemy {
 	 */
 	private int abilityToFindEnemy;
 
+	private boolean isShooting;
+
 	/**
 	 * This method assigns a model to the Enemy NPC 
 	 * The model is determined by the drawModelDir string which will be declared in this method
 	 */
+	
+	/**
+	 * calls shoot method for current weapon
+	 * returns true when enemy fires weapon
+	 */
+	public boolean shoot(){
+		return isShooting;
+	}
+	
 	public void drawModel(){
 		
 	}
