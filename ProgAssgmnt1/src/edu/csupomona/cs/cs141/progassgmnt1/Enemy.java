@@ -165,23 +165,24 @@ public class Enemy {
 	}
 
 	/**
-	 * 
+	 * This method checks current paths and other paths and decides which path is best
+	 * If the decideAction method decides that the Enemy NPC should find a path then this method should choose which path to take
+	 * Define isPathBlocked and check to see if the path is blocked; if the path is not blocked and it is the best way to the target,
+	 * which is decided in targetFinding, then take that path.
+	 * Check to see if the Enemy NPC can jump; if it can and it will help it reach the target then do so.
+	 * Check to see if the Enemy  NPC can crouch; if it can and it will help it dodge and hide, which is decided under decideAction,
+	 * then do so.
 	 */
 	public void pathFinding(){
 		
 	}
 	
 	/**
-	 *
+	 * This method uses hearDistance and sightDistance to find a target for decideAction() 
+	 * Get the abilityToFindEnemy value from the Gamemode and then multiply it by hearDistance and sightDistance 
+	 * Give the target to decideAction()
 	 */
 	public void targetFinding(){
-		
-	}
-	
-	/**
-	 *
-	 */
-	public void noticeEntity(){
 		
 	}
 	
