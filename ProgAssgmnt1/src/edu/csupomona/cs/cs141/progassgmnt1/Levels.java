@@ -69,12 +69,10 @@ public class Levels {
 	 * (CTF), seconds in the hill (King of the Hill), or points scored from sector control (Domination)
 	 * 
 	 */
-	private static int point;
-	
+	private static int point;	
 	
 	/**
 	 * This method tracks the bullets fired from either the User or the Enemy
-	 * 
 	 * @param isShooting
 	 * 		true when {@link User} or {@link Enemy} are actively firing their weapon
 	 * @return
@@ -87,19 +85,30 @@ public class Levels {
 	/**
 	 * This method will calculate the amount of damage taken by either {@link User}
 	 * or {@link Enemy}
-	 * 
 	 * @param dmg 
 	 * 		passed from either {@link User} or {@link Enemy}, is the amount of damage
 	 * 		that each shot fired can do
-	 * 
 	 * @param isHit 
 	 * 		passed from {@link #bulletsFired(boolean)}, true with each hit that lands
-	 * 
 	 * @return
 	 * 		The amount of damage to be done to either {@link User} or {@link Enemy}
 	 */
 	public static int dmgCalculator(int dmg, boolean isHit) {
 		return dmgFinal;
+	}
+	
+	/**
+	 * This method calculates score by adding together {@link #point points}, this should be called from
+	 * {@link GameType}
+	 * @param point
+	 * 		passed in whenever something occurs that denotes a "point" be given, dependent on game type
+	 * @param score
+	 * 		passed from {@link GameType} to this method, can only increase
+	 * @return
+	 * 		{@link #score}, to keep track of red and blue team score in {@link GameType}
+	 */
+	public static int scoreCalculator(int point, int score) {
+		return score;
 	}
 	
 	/**
