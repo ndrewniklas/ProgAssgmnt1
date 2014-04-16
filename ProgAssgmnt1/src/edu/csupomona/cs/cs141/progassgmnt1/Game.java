@@ -27,19 +27,24 @@ public class Game {
 	 * So far we have a DEATHMATCH, KINGOFTHEHILL, and CAPTURETHEFLAG gametype.
 	 */
 	 private String gametype; 
+	 
 	 /**
 	  * Need array of players to access each player's variables.
 	  * Note: User constructor will need to register a new player in the array using addplayer method. 
 	  */
 	 private players = new array[User];
+	 
 	 /**
 	  * This is used for deathmatch to check the amount of remaining players.
+	  * This allows for making teams.  
 	  */
-	 private int player_count = 0; 
+	 private int playerCount; 
+	 
 	 /**
 	  * This is the win condition for the King of the Hill game type.
 	  */
 	 private int controlTimeGoal;  
+	 
 	 /**
 	  * This is the win condition for the Capture the Flag game type.
 	  */
@@ -49,17 +54,9 @@ public class Game {
 	 * The boolean to check if the game is over
 	 */
 	private boolean gameOver;
+	
 	 /**
-	  * 
-	  * @param gametype This is the constructor for the initilization of the game and whichever type it will be.  
-	  */
-	 public Game(String gametype){ 
-		 currentgame = new Game();  
-		 currentgame.gametype = gametype; 
-	 }
-	 
-	 /**
-	  * This method adds a new user to the array as a player.
+	  * This method adds a new user from the User class to the array as a player which will be .  
 	  */
 	 public void addplayer(User){
 
@@ -67,7 +64,9 @@ public class Game {
 	 
 	 /**
 	  *  This function determines if the current game is over based on the game type. 
-	  *  
+	  *  Theoretically, a switch statement could be used to determine the win condition based on the game type as the switch arguments.
+	  *  From there the switch would call the players array which calls the User class for its win condition checks: 
+	  *  e.g. Kills(Deathmatch), Control Time(King of the Hill), Flags Captured(Capture the Flag).  
 	  */
 	 public static boolean isGameOver(){
 
