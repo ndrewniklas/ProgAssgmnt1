@@ -2,14 +2,14 @@
  * CS 141: Introduction to Programming and Problem Solving
  * Professor: Edwin Rodr&iacute;guez
  *
- * Programming Assignment #N
+ * Programming Assignment #1
  *
  * you will develop a design for a First Person Shooter (FPS) video game. 
  * You are to develop a high level architectural design of this system, 
  * and the objects that exist in and compose it. You will list the relevant 
  * classes for each object, and describe their attributes and behaviors.
  *
- * Team #N / (or name if individual)
+ * Team #BAAKD
  *   Ben Nickerson
  *   Andrew Nipp
  *   Dylan Nguyen
