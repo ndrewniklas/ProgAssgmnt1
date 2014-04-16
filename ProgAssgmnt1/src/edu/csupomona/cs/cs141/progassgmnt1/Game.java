@@ -1,7 +1,23 @@
+/**
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodríguez
+ * 
+ * Programming Assignment 1
+ * 
+ * A team assignment to create skeleton code for a First person shooter video game
+ * 
+ * Team Ba^2kd
+ * Ben Nickerson (Captain)
+ * Kurt Newcomb
+ * Dylan Nguyen
+ * Andrew Niklas
+ * Andrew Nipp
+ */
+
 package edu.csupomona.cs.cs141.progassgmnt1;
 
 public class Game {
-	 /* This class starts by intializing the game, 
+	 /** This class starts by intializing the game, 
 	 * then monitors the objectives and determines the winner based on the game type's objectives.
 	 * Once the winner is determined, it ends the game.
 	 * This class determines if the game is over, based upon the different types ( 
@@ -10,28 +26,32 @@ public class Game {
 	 private String gametype; // So far we have a DEATHMATCH, KINGOFTHEHILL, and CAPTURETHEFLAG gametype.
 	 private players = new array[User]; // need array of players to access each player's variables.
 	 // Note: User constructor will need to register a new player in the array using addplayer method.  
-
+	 private int player_count = 0; // This is used for deathmatch to check the amount of remaining players.
+	 private int controlTimeGoal = 300; // This is the win condition for King of the Hill.
+	 private int flagCaptured = 4;
+	 
+	 /**
+	 * The boolean to check if the game is over
+	 */
+	private boolean gameOver;
 	 
 	 public Game(String gametype){ // This is the constructor for the initialization of the game and type.
 		 currentgame = new Game();  
 		 currentgame.gametype = gametype; 
 	 }
 	 
+	 /**
+	  * This method adds a new user to the array as a player.
+	  */
 	 public void addplayer(User){
-		 /*
-		  * This method adds a new user to the array as a player.
-		  */
+
 	 }
 	 
-	 
+	 /**
+	  *  This function determines if the current game is over based on the game type. 
+	  */
 	 public static boolean isGameOver(){
-		/*
-		 *  This function determines if the current game is over based on the game type. 
-		 */
-		 int player_count = 0; // This is used for deathmatch to check the amount of remaining players.
-		 int controltimegoal = 300; // This is the win condition for King of the Hill.
-		 int flag_captured = 4;
-		 boolean gameover = false;
+
 		 
 		 switch (gametype){
 		 	case "DEATHMATCH": // Over when the lives of all but 1 or fewer players is 0.
