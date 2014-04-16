@@ -1,6 +1,22 @@
 /**
- * 
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodr&iacute;guez
+ *
+ * Programming Assignment #N
+ *
+ * you will develop a design for a First Person Shooter (FPS) video game. 
+ * You are to develop a high level architectural design of this system, 
+ * and the objects that exist in and compose it. You will list the relevant 
+ * classes for each object, and describe their attributes and behaviors.
+ *
+ * Team #N / (or name if individual)
+ *   Ben Nickerson
+ *   Andrew Nipp
+ *   Dylan Nguyen
+ *   Kurt Newcomb
+ *   Andrew Niklas 
  */
+
 package edu.csupomona.cs.cs141.progassgmnt1;
 
 
@@ -45,6 +61,11 @@ public class Weapons {
 	/**
 	 * @param AMMO is the integer that is retrieved when the user
 	 * moves his avatar over a weapon.
+	 * 
+	 * checkAmmo method will determine if there is ammo present
+	 * in a gun or not, and this will be apply to the equipped weapon
+	 * after firing the gun and when checking weapons on the floor
+	 * 
 	 * @return a boolean that will determine if there is ammo or not
 	 */
 	private boolean checkAmmo(int AMMO) {
@@ -71,24 +92,6 @@ public class Weapons {
 	 */
 	public void equipWeapon() {
 		
-	}
-	
-	/**
-	 * @param weaponType is the return value of the gunType method, which returns
-	 * the unique id number of the gun chosen in the game via menu or in-game action
-	 * 
-	 * @return the damage that is 
-	 */
-	private double returnGunDamage(int weaponType){
-		return 0.0;
-	}
-	
-	/**
-	 * @param weaponType
-	 * @return
-	 */
-	private double returnEffectiveRange(int weaponType){
-		return 0.0;
 	}
 	
 	/**
