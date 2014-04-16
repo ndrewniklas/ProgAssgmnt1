@@ -10,7 +10,11 @@
  * classes for each object, and describe their attributes and behaviors.
  *
  * Team #N / (or name if individual)
- *   Ben Nickerson, Andrew Nipp, Dylan Nguyen, Kurt Newcomb, Andrew Niklas 
+ *   Ben Nickerson
+ *   Andrew Nipp
+ *   Dylan Nguyen
+ *   Kurt Newcomb
+ *   Andrew Niklas 
  */
 
 package edu.csupomona.cs.cs141.progassgmnt1;
