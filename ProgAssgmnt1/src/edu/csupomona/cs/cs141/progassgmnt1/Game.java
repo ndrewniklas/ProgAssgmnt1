@@ -53,9 +53,7 @@ public class Game {
 	/**
 	 * This is the array for all the players in the game.
 	 */
-	private User players[];
-	
-	
+	private User[] players;
 		
 	/**
 	  * This method adds a new user from the {@link User} class to the array as a player which will be .  
