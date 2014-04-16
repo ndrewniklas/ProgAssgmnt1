@@ -20,24 +20,11 @@ package edu.csupomona.cs.cs141.progassgmnt1;
 /**
  * This class allows {@link User} and {@link Enemy} to interact with each other within some level of the \
  * User's choosing.
- * 
- * @author Ben
  *
- */
-/**
- * @author Ben
- *
- */
-/**
  * @author Ben
  *
  */
 public class Levels {
-	
-	/**
-	 * This field is used to keep track of which level is being selected 
-	 */
-	private int levelSelect;
 	
 	/**
 	 * This field is for use with {@link #bulletsFired(boolean)}
@@ -201,14 +188,7 @@ public class Levels {
 	 * 		The boolean that determines whether the level will use the day or night skin
 	 */
 	public static void levelOne(boolean dayNight) {
-	}
-	
-	
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) { 
-	
+		
 	}
 
 }

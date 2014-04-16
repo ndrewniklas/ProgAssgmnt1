@@ -21,9 +21,9 @@ package edu.csupomona.cs.cs141.progassgmnt1;
 
 
 /**
- * @author Dylan Nguyen
- * {@link Weapons} will contain all the necessary info
+ *{@link Weapons} will contain all the necessary info
  * and methods to access and define weapons in the game
+ * @author Dylan Nguyen
  */
 public class Weapons {
 
@@ -32,53 +32,52 @@ public class Weapons {
 	 * This is one of the fields that would be used to contain
 	 * the information of each weapon, where there is only 5 weapons,
 	 * which are the knife, M9, M16, SV98, and Katana. The weapon properties
-	 * will be in the array in the following order as integer values: weapon id, 
+	 * will be in the {@code array} in the following order as integer values: weapon id, 
 	 * weapon damage, weapon ammo capacity, and effective range
 	 */
 	int[] weaponInfo = new int[4];
 	
 	/**
-	 * @param userInput is determined by the weapon picked up in-game
-	 * or when the user chooses his initial weapon. Each weapon in the game,
-	 * is assigned a number. That number is taken as input for this method
-	 * as the variable userInput when prompted by the user's input via menu
-	 * or in-game action. This will make
-	 * 
-	 * @return The return value will be the identifying number at the beginning of
-	 * each weapon array for the weapon that has been walked over, chosen, or equipped
-	 * 
-	 * {@link #gunType) will check for one of three
-	 * weapon types which is dependent on the user input when
+	 * {@link #gunType} will check for one of three
+	 * weapon types which is dependent on the {@link User} when
 	 * choosing the initial weapon, walking over a weapon in-game,
 	 * or each time.
+	 * @param userInput is determined by the weapon picked up in-game
+	 * or when the {@link User} chooses his initial weapon. Each weapon in the game,
+	 * is assigned a number. That number is taken as input for this method
+	 * as the {@code variable} userInput when prompted by the {@link User User's}
+	 * input via menu or in-game action
+	 * 
+	 * @return The return value will be the identifying number at the beginning of
+	 * each weapon {@code array} for the weapon that has been walked over, chosen, or equipped
+	 *
 	 */
-	
 	private int gunType(int userInput){
 		return 0;
 		
 	}
 	
 	/**
-	 * @param AMMO is the integer that is retrieved when the user
-	 * moves his avatar over a weapon.
+	 * {@link #gunType} will check for one of three
+	 * weapon types which is dependent on the user input when
+	 * choosing the initial weapon, walking over a weapon in-game,
+	 * or each time.
+	 * @param AMMO is the {@code integer} that is retrieved when the user
+	 * moves their avatar over a weapon.
 	 * 
-	 * {@link #checkAmmo} will determine if there is ammo present
-	 * in a gun or not, and this will be apply to the equipped weapon
-	 * after firing the gun and when checking weapons on the floor
-	 * 
-	 * @return a boolean that will determine if there is ammo or not
+	 * @return a {@code boolean} that will determine if there is ammo or not
 	 */
 	private boolean checkAmmo(int AMMO) {
 		return true;
 	}
 	
 	/**
-	 * @param isThereAmmo will be the return value of the checkAmmo method
-	 * 
 	 * {@link #canEquip} will check if a weapon on the floor has ammo
-	 * that is either spawned or dropped, and return a boolean to determine
+	 * that is either spawned or dropped, and return a {@code boolean} to determine
 	 * if the weapon can be equipped
 	 * 
+	 * @param isThereAmmo will be the return value of {@link #checkAmmo(int)}
+	 *
 	 * @return the returned value will be used
 	 */
 	private boolean canEquip(boolean isThereAmmo){
@@ -96,9 +95,9 @@ public class Weapons {
 	
 	/**
 	 * {@link #fireWeapon} will fire the weapon when prompted
-	 * by user input and decrease the value of the of the ammo value
-	 * in the weapon array each time {@link #fireWeapon} is initialized, but only
-	 * if the return value of the canEquip method is true
+	 * by {@link User} input and decrease the value of the of ammo
+	 * in the weapon {@code array} each time {@link #fireWeapon} is initialized, but only
+	 * if the return value of the {@link #canEquip} method is {@code true}
 	 */
 	public void fireWeapon() {
 		
@@ -106,7 +105,7 @@ public class Weapons {
 	
 	/**
 	 * {@link #reloadWeapon} method will reload the weapon equipped when
-	 * prompted by user input, or when the weapon ammo is depleted
+	 * prompted by {@link User} input, or when the weapon ammo is depleted
 	 */
 	public void reloadWeapon() {
 		
@@ -114,7 +113,7 @@ public class Weapons {
 	
 	/** 
 	 * {@link #dropWeapon} will drop the weapon if there is no ammo left in the weapon
-	 * which would be kept track of using a four part array which will contain
+	 * which would be kept track of using a four part {@code array} which will contain
 	 * values for the weapon id, weapon damage, weapon ammo capacity, and effective
 	 * range
 	 */

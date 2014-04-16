@@ -20,6 +20,9 @@
 package edu.csupomona.cs.cs141.progassgmnt1;
 
 /**
+ * This class contains all information pertinent to the User, including things like stats and character
+ * level, along with methods to allow for interacting with the level and gametype being used.
+ * 
  * @author Andrew
  * 
  */
@@ -38,7 +41,7 @@ public class User {
 	private String name;
 
 	/**
-	 * tracks the users characters current level
+	 * tracks the user's character's current level
 	 */
 	private int level;
 
@@ -48,44 +51,46 @@ public class User {
 	private int speed;
 
 	/**
-	 * maintains the users current level of health
+	 * maintains the user's current level of health
 	 */
 	private int health;
 
 	/**
-	 * defines whether the character currently as a weapon activated
+	 * defines whether the character currently as a {@link Weapons weapon} activated
 	 */
 	private boolean hasWeapon;
 
 	/**
-	 * is true when User shoots weapon
+	 * is {@code true} when {@link User} shoots weapon
 	 */
 	private boolean isShooting;
 	
 	/**
 	 * Holds items that the character currently has such as weapons, ammo,
-	 * health packs
+	 * and health packs
 	 */
 	private Item[] inventory;
 
 	
 	/**
-	 * controls the movement of the character through input given by the user
+	 * controls the movement of the character through input given by the {@link User}
+	 * @param input basically any input given by the {@link User}
 	 */
 	public void move(int input){
 		//TO-DO
 	}
 	
 	/**
-	 * Removes user from line of sight of enemy
+	 * Removes {@link User} from line of sight of {@link Enemy}
 	 */
 	public void crouch(){
 		
 	}
 	
 	/**
-	 * calls shoot method for current weapon
-	 * returns true when user fires weapon
+	 * calls shoot method for the current {@link Weapons weapon}
+	 * @return 
+	 * 		true when user fires weapon
 	 */
 	public boolean shoot(){
 		return isShooting;
@@ -93,9 +98,11 @@ public class User {
 	}
 	
 	/**
-	 * allow the user to equip a weapon from their inventory
+	 * allow the {@link User} to equip a weapon from their {@link #inventory}
 	 * @param weaponNum
+	 * 		The number assigned to the slot in the {@link #inventory}
 	 * @return
+	 * 		The first {@code int} in {@link Weapons#weaponInfo} 
 	 */
 	public String equipWeapon(int weaponNum){
 		return "weaponID";
@@ -103,9 +110,11 @@ public class User {
 	}
 	
 	/**
-	 * allows user to cycle through all weapons in their inventory
+	 * allows {@link User} to cycle through all weapons in their {@link #inventory}
 	 * @param weaponNum
+	 * 		The number assigned to the slot in the {@link #inventory}
 	 * @return
+	 * 		The first {@code int} in {@link Weapons#weaponInfo}
 	 */
 	public String switchWeapon(int weaponNum){
 		return "weaponID";
@@ -135,9 +144,10 @@ public class User {
 	}
 	
 	/**
-	 * returns character to the start point defined by the gameType
-	 * and restores health 
+	 * returns character to the start point defined by the {@link Game}
+	 * and restores {@link #health} 
 	 * @param location
+	 * 		wherever in the level that the {@link User} will spawn in
 	 */
 	public void respawn(int[] location){
 		

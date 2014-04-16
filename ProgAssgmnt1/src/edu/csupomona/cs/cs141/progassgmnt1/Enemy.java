@@ -27,7 +27,7 @@ public class Enemy {
 	/**
 	 * The directory for the character model
 	 */
-	private String drawModelDir;
+	private String[] drawModelDir;
 	
 	/**
 	 * This field gives the {@link Enemy} a name to help check for kills
@@ -112,13 +112,14 @@ public class Enemy {
 	 * This method assigns a model to the {@link Enemy} 
 	 * The model is determined by the {@link #drawModelDir} string which will be declared in this method
 	 */
-	public void drawModel(){
+	public void drawModel(String[] drawModelDir){
 		
 	}
 	
 	/**
 	 * This method returns the movement speed of the {@link Enemy}
-	 * @return the movement speed
+	 * @return 
+	 * 		the movement speed
 	 */
 	public int getMovementSpeed(){
 		return movementSpeed;
@@ -126,27 +127,37 @@ public class Enemy {
 	
 	/**
 	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} forward
+	 * @param speed
+	 * 		the {@link #movementSpeed}
 	 */
-	public void moveForward(){
+	public void moveForward(int speed){
 		
 	}
 
 	/**
 	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} backwards
+	 * @param
+	 * 			the {@link #movementSpeed}
 	 */
-	public void moveBackwards(){
+	public void moveBackwards(int speed){
 		
 	}
 	
 	/**
-	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} in the left direction (strafe)
+	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} in the 
+	 * left direction (strafe)
+	 * @param speed
+	 * 		the {@link #movementSpeed}
 	 */
-	public void moveLeft(){
+	public void moveLeft(int speed){
 	
 	}
 	
 	/**
-	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} in the right direction (strafe)
+	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} in the 
+	 * right direction (strafe)
+	 * @param speed
+	 * 		the {@link #movementSpeed}
 	 */
 	public void moveRight(){
 	
@@ -155,16 +166,20 @@ public class Enemy {
 	/**
 	 * This method checks {@link #canCrouch} to see if the {@link Enemy} can crouch
 	 * If the {@link Enemy} can crouch then do so, if not then do nothing
+	 * @param canCrouch
+	 * 		{@code true} when enemy can crouch
 	 */
-	public void crouch(){
+	public void crouch(boolean canCrouch){
 		
 	}
 	
 	/**
 	 * This method checks the {@link #canJump} to see if the {@link Enemy} can jump
 	 * If the {@link Enemy} can jump then do so, if not then do nothing
+	 * @param canJump
+	 * 		{@code true} when enemy can jump
 	 */
-	public void jump(){
+	public void jump(boolean canJump){
 		
 	}
 	
@@ -184,32 +199,56 @@ public class Enemy {
 
 	/**
 	 * This method checks current paths and other paths to decide which is the best
-	 * If the {@link #decideAction()} method decides that the {@link Enemy} should find a path then this method should choose which path to take
-	 * Define {@link #isPathBlocked} and check to see if the path is blocked; if the path is not blocked and it is the best way to the target,
+	 * If the {@link #decideAction()} method decides that the {@link Enemy} should find a path 
+	 * then this method should choose which path to take
+	 * Define {@link #isPathBlocked} and check to see if the path is blocked; 
+	 * if the path is not blocked and it is the best way to the target,
 	 * which is decided in {@link #targetFinding()}, then take that path.
 	 * Check {@link #canJump}; if {@link Enemy} can and it will help it reach the target then do so.
 	 * Check to see if the {@link Enemy} can crouch; if it can and it will help it dodge and hide, which is decided under {@link #decideAction()},
 	 * then do so.
+	 * @param isPathBlocked
+	 * 		{@code true} when path is blocked
+	 * @param canJump
+	 * 		{@code true} when enemy can jump
+	 * @param canCrouch
+	 * 		{@code true} when enemy can crouch
+	 * 
 	 */
-	public void pathFinding(){
+	public void pathFinding(boolean isPathBlocked, boolean canJump, boolean canCrouch){
 		
 	}
 	
 	/**
-	 * This method uses {@link #hearDistance} and {@link #sightDistance} to find a target for {@link #decideAction()} 
-	 * Define {@link #abilityToFindPlayer} and then multiply it by {@link #hearDistance} and {@link #sightDistance} 
+	 * This method uses {@link #hearDistance} and {@link #sightDistance} to find a 
+	 * target for {@link #decideAction()} 
+	 * Define {@link #abilityToFindPlayer} and then multiply it 
+	 * by {@link #hearDistance} and {@link #sightDistance} 
 	 * If the method finds a target then decide if {@link #isEnemy} is true or false
 	 * Give the target to {@link #decideAction()}
+	 * @param hearDistance
+	 * 		how far the enemy can hear
+	 * @param abilityToFindPlayer
+	 * 		how well the enemy can find the player
+	 * @param sightDistance
+	 * 		how far the enemy can see
+	 * @param isEnemy
+	 * 		{@code true} when enemy sees an enemy
+	 * 		
 	 */
-	public void targetFinding(){
-		
+	public boolean targetFinding(int hearDistance, int abilityToFindPlayer, int sightDistance, boolean isEnemy){
+		return isEnemy;
 	}
 	
 	/**
-	 * This method retrieves a target from {@link #targetFinding()} and depending on if it is an enemy or not decide a course of action
-	 * Decide if {@link #shouldChaseEnemy} is true, if so then call {@link #chaseEnemy()}, if not then do nothing
-	 * If the {@link Enemy} is chasing the enemy the decide if it should stop or not based on how much {@link #health} is left with {@link #shouldStopChase}
-	 * If the {@link Enemy} is chasing the enemy then have the {@link #pathFinding()} method find a proper path 
+	 * This method retrieves a target from {@link #targetFinding()} and depending on if it is an enemy or
+	 *  not decide a course of action
+	 * Decide if {@link #shouldChaseEnemy} is true, 
+	 * if so then call {@link #chaseEnemy()}, if not then do nothing
+	 * If the {@link Enemy} is chasing the enemy the decide if 
+	 * it should stop or not based on how much {@link #health} is left with {@link #shouldStopChase}
+	 * If the {@link Enemy} is chasing the enemy then have the 
+	 * {@link #pathFinding()} method find a proper path 
 	 * If no gun is equipped then call {@link #equipWeapon()}
 	 */
 	public void decideAction(){

@@ -16,34 +16,30 @@
 
 package edu.csupomona.cs.cs141.progassgmnt1;
 
-/** This class starts by intializing the game, 
+/** This class starts by initializing the game, 
 * then monitors the objectives and determines the winner based on the game type's objectives.
 * Once the winner is determined, it ends the game.
 * This class determines if the game is over, based upon the different types ( 
-* e.g. "Deathmatch", "KingOfTheHill", and "CaptureTheFlag").
+* e.g. "Deathmatch" and "CaptureTheFlag").
 */
 public class Game {
 	 
 	 /**
-	 * So far we have a DEATHMATCH, KINGOFTHEHILL, and CAPTURETHEFLAG gametype.
+	 * So far we have a DEATHMATCH and CAPTURETHEFLAG game type.
 	 */
-	 private String gametype; 
+	 private String gameType; 
 	  
 	 /**
-	  * This is used for deathmatch to check the amount of remaining players.
+	  * This is used for Deathmatch to check the amount of remaining players.
 	  * This allows for making teams.  
 	  */
 	 private int playerCount; 
 	 
-	 /**
-	  * This is the win condition for the King of the Hill game type.
-	  */
-	 private int controlTimeGoal;  
 	 
 	 /**
 	  * This is the win condition for the Capture the Flag game type.
 	  */
-	 private int flagCaptured;
+	private boolean flagCaptured;
 	 
 	 /**
 	 * The boolean to check if the game is over
@@ -70,5 +66,79 @@ public class Game {
 	  */
 	 public static boolean isGameOver(){
 		 return gameOver;
+	}
+
+	/**
+	 * This will get the game type from the {@link User}
+	 * @return
+	 * 		whatever the game type is
+	 */
+	public String getGameType() {
+		return gameType;
+	}
+
+	/**
+	 * This method sets the game type 
+	 * @param gameType
+	 * 		sets the string to be used
+	 */
+	public void setGameType(String gameType) {
+		this.gameType = gameType;
+	}
+
+	/**
+	 * counts the players in the lobby
+	 * @return
+	 * 		however many players are in the lobby
+	 */
+	public int getPlayerCount() {
+		return playerCount;
+	}
+
+	/**
+	 * sets the {@link #playerCount}
+	 * @param playerCount
+	 * 		amount of players in the lobby
+	 */
+	public void setPlayerCount(int playerCount) {
+		this.playerCount = playerCount;
+	}
+
+	/**
+	 * determines if the flag is captured
+	 *
+	 * @return
+	 * 		whether or not the flag got captured
+	 */
+	public boolean getFlagCaptured() {
+		return flagCaptured;
+	}
+
+	/**
+	 * sets the flag as being captured
+	 * @param flagCaptured
+	 * 		true when the flag is captured
+	 */
+	public void setFlagCaptured(boolean flagCaptured) {
+		this.flagCaptured = flagCaptured;
+	}
+
+	/**
+	 * If there are multiple {@link User users} in the game, this will be the {@code array}
+	 *  to keep track of them
+	 * @return
+	 * 		the {@code array} of {@link User users}
+	 */
+	public User[] getPlayers() {
+		return players;
+	}
+
+	/**
+	 * Sets the {@code array}
+	 * @param players
+	 * 		the {@code array} of {@link User users}
+	 */		
+	public void setPlayers(User[] players) {
+		this.players = players;
 	}
 }
