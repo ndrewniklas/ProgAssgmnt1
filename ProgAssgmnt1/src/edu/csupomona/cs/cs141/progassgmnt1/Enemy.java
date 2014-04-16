@@ -80,18 +80,18 @@ public class Enemy {
 	private boolean isEnemy;
 	
 	/**
-	 * Checks to see if the {@link Enemy} should chase the {@link User}
+	 * Checks to see if the {@link Enemy} should chase {@link User}
 	 */
 	private boolean shouldChaseEnemy;
 	
 	/**{@link User}
-	 * Checks to see if the {@link Enemy} should stop chasing the {@link User}
+	 * Checks to see if the {@link Enemy} should stop chasing {@link User}
 	 */
 	private boolean shouldStopChase;
 	
 	/**
 	 * The {@link Enemy}'s ability to find {@link User} through sight and sound
-	 * This integer will multiply the {link #sightDistance()} and the {@link #hearDistance} depending on the {@link Gamemode}
+	 * This integer will multiply the {@link #sightDistance} and the {@link #hearDistance} depending on the {@link Gamemode}
 	 */
 	private int abilityToFindEnemy;
 	
@@ -183,7 +183,7 @@ public class Enemy {
 	}
 
 	/**
-	 * This method checks current paths and other paths and decides which path is best
+	 * This method checks current paths and other paths to decide which is the best
 	 * If the {@link #decideAction()} method decides that the {@link Enemy} should find a path then this method should choose which path to take
 	 * Define {@link #isPathBlocked} and check to see if the path is blocked; if the path is not blocked and it is the best way to the target,
 	 * which is decided in {@link #targetFinding()}, then take that path.
@@ -255,6 +255,7 @@ public class Enemy {
 	
 	/**
 	 * This method has the {@link Enemy} equip a weapon from {@link Weapon}
+	 * @return the weaponID from {@link Weapon}
 	 */
 	public String equipWeapon(){
 		return "weaponID";
