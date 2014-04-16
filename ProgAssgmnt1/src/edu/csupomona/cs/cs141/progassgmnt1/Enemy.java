@@ -16,7 +16,7 @@
 package edu.csupomona.cs.cs141.progassgmnt1;
 
 /**
- * This class defines the Enemy NPC for the First Person Shooter
+ * This class defines the {@link Enemy} for the First Person Shooter
  * 
  * @author Andrew Nipp
  *
@@ -35,12 +35,12 @@ public class Enemy {
 	public final static String ENEMY = "Enemy";
 	
 	/**
-	 * The speed of the Enemy NPC's movement
+	 * The speed of the {@link Enemy}'s movement
 	 */
 	private int movementSpeed;
 	
 	/**
-	 * The amount of health points the Enemy NPC has
+	 * The amount of health points the {@link Enemy} has
 	 */
 	private int health;
 	
@@ -50,74 +50,74 @@ public class Enemy {
 	private boolean isPathBlocked;
 	
 	/**
-	 * Checks to see if the Enemy NPC can jump
+	 * Checks to see if the {@link Enemy} can jump
 	 */
 	private boolean canJump;
 	
 	/**
-	 * The height the Enemy NPC can jump
+	 * The height the {@link Enemy} can jump
 	 */
 	private int jumpHeight;
 		
 	/**
-	 * Checks to see if the Enemy NPC can crouch
+	 * Checks to see if the {@link Enemy} can crouch
 	 */
 	private boolean canCrouch;
 	
 	/**
-	 * The distance the Enemy NPC can hear a noise
+	 * The distance the {@link Enemy} can hear a noise
 	 */
 	private int hearDistance;
 	
 	/**
-	 * The distance the Enemy NPC can see an entity
+	 * The distance the {@link Enemy} can see an entity
 	 */
 	private int sightDistance;
 	
 	/**
-	 * Checks to see if the entity found is an enemy (player) or friend
+	 * Checks to see if the entity found is {@link User} or friend
 	 */
 	private boolean isEnemy;
 	
 	/**
-	 * Checks to see if the Enemy NPC should chase the player
+	 * Checks to see if the {@link Enemy} should chase the {@link User}
 	 */
 	private boolean shouldChaseEnemy;
 	
-	/**
-	 * Checks to see if the Enemy NPC should stop chasing the player
+	/**{@link User}
+	 * Checks to see if the {@link Enemy} should stop chasing the {@link User}
 	 */
 	private boolean shouldStopChase;
 	
 	/**
-	 * The Enemy NPC's ability to find enemies through sight and sound
-	 * This integer will multiply the sightDistance and the hearDistance depending on the Gamemode
+	 * The {@link Enemy}'s ability to find {@link User} through sight and sound
+	 * This integer will multiply the {link #sightDistance()} and the {@link #hearDistance} depending on the {@link Gamemode}
 	 */
 	private int abilityToFindEnemy;
 	
 	/** 
-	 * Check to see if the Enemy NPC is shooting
+	 * Check to see if the {@link Enemy} is shooting
 	 */
 	private boolean isShooting;
 
 	/**
 	 * Calls shoot method for current weapon
-	 * returns true when enemy fires weapon
+	 * returns true when {@link Enemy} fires weapon
 	 */
 	public boolean shoot(){
 		return isShooting;
 	}
 	
 	/**
-	 * This method assigns a model to the Enemy NPC 
-	 * The model is determined by the drawModelDir string which will be declared in this method
+	 * This method assigns a model to the {@link Enemy} 
+	 * The model is determined by the {@link #drawModelDir} string which will be declared in this method
 	 */
 	public void drawModel(){
 		
 	}
 	
 	/**
-	 * This method returns the movement speed of the Enemy NPC
+	 * This method returns the movement speed of the {@link Enemy}
 	 * @return the movement speed
 	 */
 	public int getMovementSpeed(){
@@ -125,58 +125,58 @@ public class Enemy {
 	}
 	
 	/**
-	 * This method uses the speed from movementSpeed to move the Enemy NPC forward
+	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} forward
 	 */
 	public void moveForward(){
 		
 	}
 
 	/**
-	 * This method uses the speed from movementSpeed to move the Enemy NPC backwards
+	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} backwards
 	 */
 	public void moveBackwards(){
 		
 	}
 	
 	/**
-	 * This method uses the speed from movementSpeed to move the Enemy NPC in the left direction (strafe)
+	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} in the left direction (strafe)
 	 */
 	public void moveLeft(){
 	
 	}
 	
 	/**
-	 * This method uses the speed from movementSpeed to move the Enemy NPC in the right direction (strafe)
+	 * This method uses the speed from {@link #movementSpeed} to move the {@link Enemy} in the right direction (strafe)
 	 */
 	public void moveRight(){
 	
 	}
 	
 	/**
-	 * This method checks the canCrouch boolean to see if the Enemy NPC can crouch
-	 * If the Enemy NPC can crouch then do so, if not then do nothing
+	 * This method checks {@link #canCrouch} to see if the {@link Enemy} can crouch
+	 * If the {@link Enemy} can crouch then do so, if not then do nothing
 	 */
 	public void crouch(){
 		
 	}
 	
 	/**
-	 * This method checks the canJump boolean to see if the Enemy NPC can jump
-	 * If the Enemy NPC can jump then do so, if not then do nothing
+	 * This method checks the {@link #canJump} to see if the {@link Enemy} can jump
+	 * If the {@link Enemy} can jump then do so, if not then do nothing
 	 */
 	public void jump(){
 		
 	}
 	
 	/**
-	 * This method will cause the Enemy NPC to turn counterclockwise
+	 * This method will cause the {@link Enemy} to turn counterclockwise
 	 */
 	public void turnCounterClockwise(){
 		
 	}
 	
 	/**
-	 * This method will cause the Enemy NPC to turn clockwise
+	 * This method will cause the {@link Enemy} to turn clockwise
 	 */
 	public void turnClockwise(){
 		
@@ -184,11 +184,11 @@ public class Enemy {
 
 	/**
 	 * This method checks current paths and other paths and decides which path is best
-	 * If the decideAction method decides that the Enemy NPC should find a path then this method should choose which path to take
-	 * Define isPathBlocked and check to see if the path is blocked; if the path is not blocked and it is the best way to the target,
-	 * which is decided in targetFinding, then take that path.
-	 * Check to see if the Enemy NPC can jump; if it can and it will help it reach the target then do so.
-	 * Check to see if the Enemy  NPC can crouch; if it can and it will help it dodge and hide, which is decided under decideAction,
+	 * If the {@link #decideAction()} method decides that the {@link Enemy} should find a path then this method should choose which path to take
+	 * Define {@link #isPathBlocked} and check to see if the path is blocked; if the path is not blocked and it is the best way to the target,
+	 * which is decided in {@link #targetFinding()}, then take that path.
+	 * Check {@link #canJump}; if {@link Enemy} can and it will help it reach the target then do so.
+	 * Check to see if the {@link Enemy} can crouch; if it can and it will help it dodge and hide, which is decided under {@link #decideAction()},
 	 * then do so.
 	 */
 	public void pathFinding(){
@@ -196,45 +196,45 @@ public class Enemy {
 	}
 	
 	/**
-	 * This method uses hearDistance and sightDistance to find a target for decideAction() 
-	 * Get the abilityToFindEnemy value from the Gamemode and then multiply it by hearDistance and sightDistance 
-	 * If the method finds a target then decide if isEnemy is true or false
-	 * Give the target to decideAction()
+	 * This method uses {@link #hearDistance} and {@link #sightDistance} to find a target for {@link #decideAction()} 
+	 * Get the {@link #abilityToFindEnemy} value from the {@link Gamemode} and then multiply it by {@link #hearDistance} and {@link #sightDistance} 
+	 * If the method finds a target then decide if {@link #isEnemy} is true or false
+	 * Give the target to {@link #decideAction()}
 	 */
 	public void targetFinding(){
 		
 	}
 	
 	/**
-	 * This method retrieves a target from targetFinding() and depending on if it is an enemy or not decide a course of action
-	 * Decide if shouldChaseEnemy is true, if so then call chaseEnemy(), if not then do nothing
-	 * If the Enemy Npc is chasing the enemy the decide if it should stop or not based on how much health is left with shouldStopChase
-	 * If the Enemy NPC is chasing the enemy then have the pathFinding() method find a proper path 
-	 * If no gun is equipped then call equipWeapon()
+	 * This method retrieves a target from {@link #targetFinding()} and depending on if it is an enemy or not decide a course of action
+	 * Decide if {@link #shouldChaseEnemy} is true, if so then call {@link #chaseEnemy()}, if not then do nothing
+	 * If the {@link Enemy} is chasing the enemy the decide if it should stop or not based on how much {@link #health} is left with {@link #shouldStopChase}
+	 * If the {@link Enemy} is chasing the enemy then have the {@link #pathFinding()} method find a proper path 
+	 * If no gun is equipped then call {@link #equipWeapon()}
 	 */
 	public void decideAction(){
 		
 	}
 	
 	/**
-	 * This method has the Enemy NPC chase the enemy chosen by targetFinding
-	 * If the decideAction() method wants to start the chase then start it, if it wants to stop the chase then stop it. 
+	 * This method has the {@link Enemy} chase the enemy chosen by {@link #targetFinding}
+	 * If the {@link #decideAction()} method wants to start the chase then start it, if it wants to stop the chase then stop it. 
 	 */
 	public void chaseEnemy(){
 	
 	}
 
 	/**
-	 * This method sets the current health of the Enemy NPC, based on Gamemode
+	 * This method sets the current health of the {@link Enemy}, based on {@link #Gamemode}
 	 * @param hp
-	 * @return the set health
+	 * @return the set {@link health}
 	 */
 	public int setHealth(int hp){
 		return health;
 	}
 	
 	/**
-	 * This method gives us this current health
+	 * This method gives us this current {@link health}
 	 * @return the health
 	 */
 	public int getHealth(){
@@ -254,10 +254,9 @@ public class Enemy {
 	}
 	
 	/**
-	 * This method has the Enemy NPC equip a weapon from the Weapon class
-	 * @param weaponList from the Weapon class
+	 * This method has the {@link Enemy} equip a weapon from {@link Weapon}
 	 */
-	public String equipWeapon(int weaponNum){
+	public String equipWeapon(){
 		return "weaponID";
 		
 	}
