@@ -197,7 +197,7 @@ public class Enemy {
 	
 	/**
 	 * This method uses {@link #hearDistance} and {@link #sightDistance} to find a target for {@link #decideAction()} 
-	 * Define {@link abilityToFindPlayer} and then multiply it by {@link #hearDistance} and {@link #sightDistance} 
+	 * Define {@link #abilityToFindPlayer} and then multiply it by {@link #hearDistance} and {@link #sightDistance} 
 	 * If the method finds a target then decide if {@link #isEnemy} is true or false
 	 * Give the target to {@link #decideAction()}
 	 */
