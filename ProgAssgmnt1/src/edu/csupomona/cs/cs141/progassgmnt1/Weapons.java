@@ -97,12 +97,12 @@ public class Weapons {
 	/**
 	 * The fireWeapon method will fire the weapon when prompted
 	 * by user input and decrease the value of the of the ammo value
-	 * in the weapon array each time fireWeapon() is initialized
+	 * in the weapon array each time fireWeapon() is initialized, but only
+	 * if the return value of the canEquip method is true
 	 */
 	public void fireWeapon() {
 		
 	}
-	
 	
 	/**
 	 * The reloadWeapon method will reload the weapon equipped when
