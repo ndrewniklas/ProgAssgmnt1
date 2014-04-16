@@ -91,9 +91,9 @@ public class Enemy {
 	
 	/**
 	 * The {@link Enemy}'s ability to find {@link User} through sight and sound
-	 * This integer will multiply the {@link #sightDistance} and the {@link #hearDistance} depending on the {@link Gamemode}
+	 * This integer will multiply the {@link #sightDistance} and the {@link #hearDistance} 
 	 */
-	private int abilityToFindEnemy;
+	private int abilityToFindPlayer;
 	
 	/** 
 	 * Check to see if the {@link Enemy} is shooting
@@ -197,7 +197,7 @@ public class Enemy {
 	
 	/**
 	 * This method uses {@link #hearDistance} and {@link #sightDistance} to find a target for {@link #decideAction()} 
-	 * Get the {@link #abilityToFindEnemy} value from the {@link Gamemode} and then multiply it by {@link #hearDistance} and {@link #sightDistance} 
+	 * Define {@link abilityToFindPlayer} and then multiply it by {@link #hearDistance} and {@link #sightDistance} 
 	 * If the method finds a target then decide if {@link #isEnemy} is true or false
 	 * Give the target to {@link #decideAction()}
 	 */
@@ -225,7 +225,7 @@ public class Enemy {
 	}
 
 	/**
-	 * This method sets the current health of the {@link Enemy}, based on {@link #Gamemode}
+	 * This method sets the current health of the {@link Enemy}
 	 * @param hp
 	 * @return the set {@link health}
 	 */
