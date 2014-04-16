@@ -22,14 +22,14 @@ package edu.csupomona.cs.cs141.progassgmnt1;
 
 /**
  * @author Dylan Nguyen
- * This is the weapons class that will contain all the necessary info
+ * {@link Weapons} will contain all the necessary info
  * and methods to access and define weapons in the game
  */
 public class Weapons {
 
 
 	/**
-	 * This is one of the few arrays that would be used to contain
+	 * This is one of the fields that would be used to contain
 	 * the information of each weapon, where there is only 5 weapons,
 	 * which are the knife, M9, M16, SV98, and Katana. The weapon properties
 	 * will be in the array in the following order as integer values: weapon id, 
@@ -47,7 +47,7 @@ public class Weapons {
 	 * @return The return value will be the identifying number at the beginning of
 	 * each weapon array for the weapon that has been walked over, chosen, or equipped
 	 * 
-	 * The gunType method will check for one of three
+	 * The {@link #gunType) will check for one of three
 	 * weapon types which is dependent on the user input when
 	 * choosing the initial weapon, walking over a weapon in-game,
 	 * or each time.
@@ -62,7 +62,7 @@ public class Weapons {
 	 * @param AMMO is the integer that is retrieved when the user
 	 * moves his avatar over a weapon.
 	 * 
-	 * checkAmmo method will determine if there is ammo present
+	 * {@link #checkAmmo) method will determine if there is ammo present
 	 * in a gun or not, and this will be apply to the equipped weapon
 	 * after firing the gun and when checking weapons on the floor
 	 * 
@@ -86,8 +86,8 @@ public class Weapons {
 	}
 	
 	/**
-	 * The equipWeapon method will be initiated by the user from their input,
-	 * only if the return value of the canEquip method is true,
+	 * {@link #equipWeapon} will be initiated by the user from their input,
+	 * only if the return value of the {@link #canEquip} is true,
 	 * and equip a weapon that is dropped or spawned on the map
 	 */
 	public void equipWeapon() {
@@ -95,9 +95,9 @@ public class Weapons {
 	}
 	
 	/**
-	 * The fireWeapon method will fire the weapon when prompted
+	 * {@link #fireWeapon} will fire the weapon when prompted
 	 * by user input and decrease the value of the of the ammo value
-	 * in the weapon array each time fireWeapon() is initialized, but only
+	 * in the weapon array each time {@link #fireWeapon} is initialized, but only
 	 * if the return value of the canEquip method is true
 	 */
 	public void fireWeapon() {
@@ -105,7 +105,7 @@ public class Weapons {
 	}
 	
 	/**
-	 * The reloadWeapon method will reload the weapon equipped when
+	 * {@link #reloadWeapon} method will reload the weapon equipped when
 	 * prompted by user input, or when the weapon ammo is depleted
 	 */
 	public void reloadWeapon() {
@@ -113,7 +113,7 @@ public class Weapons {
 	}
 	
 	/** 
-	 * This method will drop the weapon if there is no ammo left in the weapon
+	 * {@link #dropWeapon} will drop the weapon if there is no ammo left in the weapon
 	 * which would be kept track of using a four part array which will contain
 	 * values for the weapon id, weapon damage, weapon ammo capacity, and effective
 	 * range
