@@ -18,7 +18,7 @@ package edu.csupomona.cs.cs141.progassgmnt1;
  */
 
 /**
- * This class allows {@link User} and {@link Enemy} to interact with eachother within some level of the \
+ * This class allows {@link User} and {@link Enemy} to interact with each other within some level of the \
  * User's choosing.
  * 
  * @author Ben
